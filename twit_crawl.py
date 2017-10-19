@@ -32,12 +32,12 @@ while(1) :
 	for result in cve_info:
 
 		# Make Folder named with cve number
-		cve_name = result._json["text"].split()[0]
-		os.makedirs("C:\\Users\\Namjo\\Desktop\\workspace\\cve_crawl\\cve_list\\"+cve_name, exist_ok=True)
+		cve_number = result._json["text"].split()[0]
+		os.makedirs("C:\\Users\\Namjo\\Desktop\\workspace\\cve_crawl\\cve_list\\"+cve_number, exist_ok=True)
 		
 	print("Path is created at ", end="")
 	
-	now_date_time = datetime.datetime.no w().strftime("%Y-%m-%d %H:%M:%S")
+	now_date_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 	print(now_date_time)
 	
 	# Loop Forever!
